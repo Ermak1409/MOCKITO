@@ -11,13 +11,12 @@ import lombok.NoArgsConstructor;
 public class Playbill {
 
     private String name;
-    private int limit=10;
+    private int limit = 10;
     private Playbill[] items = new Playbill[0];
 
     public Playbill(String name) {
         this.name = name;
     }
-
 
     public void save(Playbill item) {
 
@@ -43,7 +42,9 @@ public class Playbill {
 
         if (items.length > limit) {
             resultLength = limit;
-        } else resultLength = items.length;
+        } else {
+            resultLength = items.length;
+        }
 
         Playbill[] result = new Playbill[resultLength];
 
